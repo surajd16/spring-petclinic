@@ -1,5 +1,5 @@
 ---
-pool: "ubuntu-22.04"
+pool: "Azure pipelines"
 
 trigger: 
   - main
