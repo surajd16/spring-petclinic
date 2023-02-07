@@ -1,0 +1,21 @@
+---
+pool: "ubuntu-22.04"
+
+trigger: 
+  - main
+
+stages:   
+  - stage: 'Build and Integration'
+    displayName: CI-petclinic
+    jobs:
+      - job: mavenjob
+        displayName: maven
+        steps:
+          - task: Maven@3
+            inputs:
+              mavenPomFile: 'pom.xml'
+              goals: 'package'
+              publishJUnitResults: true
+              testResultsFiles: '**/surefire-reports/TEST-*.xml'
+              jdkVersionOption: '1.17'
+           
