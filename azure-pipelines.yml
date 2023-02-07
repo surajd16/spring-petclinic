@@ -6,7 +6,7 @@ trigger:
 
 stages:   
   - stage: 'Build and Integration'
-    displayName: CI-petclinic
+    displayName: CIpetclinic
     jobs:
       - job: mavenjob
         displayName: maven
