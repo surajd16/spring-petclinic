@@ -5,7 +5,7 @@ trigger:
   - main
 
 stages:   
-  - stage: 'Build and Integration'
+  - stage: 'BuildandIntegration'
     displayName: CIpetclinic
     jobs:
       - job: mavenjob
